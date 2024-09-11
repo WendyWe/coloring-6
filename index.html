@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>禪繞畫</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>禪繞畫</h1>
+
+  <div id="canvas-container">
+    <!-- 背景畫布 -->
+    <canvas id="backgroundCanvas" width="1000" height="800"></canvas>
+    <!-- 繪畫畫布 -->
+    <canvas id="drawingCanvas" width="1000" height="800"></canvas>
+  </div>
+
+  <!-- 控制區域 -->
+  <div id="controls">
+    <!-- 顏色選擇按鈕 -->
+    <div id="color-picker-section">
+      <button class="color-btn" style="background-color: red;"></button>
+      <button class="color-btn" style="background-color: orange;"></button>
+      <button class="color-btn" style="background-color: yellow;"></button>
+      <button class="color-btn" style="background-color: green;"></button>
+      <button class="color-btn" style="background-color: blue;"></button>
+      <button class="color-btn" style="background-color: purple;"></button>
+    </div>
+
+    <!-- 自定義顏色選擇 -->
+    <div>
+      <label>自定義顏色選擇:</label>
+      <input type="color" id="custom-color-picker">
+    </div>
+
+    <!-- 畫筆粗細 -->
+    <div>
+      <label for="brush-size">畫筆粗細: </label>
+      <input type="range" id="brush-size" min="1" max="50" value="10">
+    </div>
+
+    <!-- 操作按鈕 -->
+    <div>
+      <button id="reset-btn">重置</button>
+      <button id="save-btn">保存</button>
+      <button id="undo-btn">回上一步</button>
+      <button id="eraser-btn">橡皮擦</button> <!-- 新增橡皮擦按鈕 -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+

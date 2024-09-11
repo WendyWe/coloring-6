@@ -1,0 +1,77 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+#canvas-container {
+    position: relative;
+    width: 1000px;
+    height: 800px;
+    margin: 20px auto;
+    border: 2px solid #333;
+    background-color: white;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#controls {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color:rgba(255, 255, 255, 0.7); /* 背景透明化 */
+    padding: 15px;
+    border: 2px solid #ccc;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;     /* 讓所有控制項居中 */
+    gap: 10px;               /* 每個按鈕或控件之間的間距 */
+    width: 150px;            /* 調整寬度，使其變窄 */
+}
+
+button, input[type="color"], input[type="range"] {
+    width: 100%;  /* 按鈕和控件寬度佔滿父容器 */
+    box-sizing: border-box;  /* 確保邊框在內部計算 */
+}
+
+.color-btn {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    outline: none;
+}
+
+#color-picker-section {
+    display: flex;
+    flex-direction: column;  /* 顏色按鈕垂直排列 */
+    align-items: center;     /* 居中對齊 */
+    margin-bottom: 10px;     /* 與其他部分保持距離 */
+}
+
+.color-btn {
+    margin-bottom: 10px; /* 每個顏色按鈕之間的間距 */
+}
+
+.color-btn.selected {
+    border: 2px solid #000;
+}
+
+input[type="range"], input[type="color"] {
+    margin: 10px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
